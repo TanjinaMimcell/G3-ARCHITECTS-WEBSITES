@@ -1,100 +1,194 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
 
 .work-sans-font {
   font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  
   font-style: normal;
 }
 
-/* shared styles */
-.margin{
+/* Shared styles */
+.margin {
     margin-top: 50px;
 }
-.flexi{
+.flexi {
     display: flex;
 }
-.text-gray{
-    color:#424242;
+.text-gray {
+    color: #424242;
 }
-.text-light-gray{
-    color:#727272;
+.text-light-gray {
+    color: #727272;
 }
-.bg-light{
+.bg-light {
     background-color: rgba(255, 144, 14, 0.1);
 }
-.btn-primary{
+.text-primary{
+    color:#FF900E;
+}
+.btn-primary {
     background-color: #FF900E;
-    color:white;
-    padding:20px 25px;
+    color: white;
+    padding: 15px 25px;
     border: none;
     border-radius: 8px;
     font-size: 1.25rem;
-    font-weight: 600px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-
-
-/* banner style*/
-
-/* header style */
-.header{
-    width: 120rem;
-    height: 82.625rem;
+/* Header style */
+.header {
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
 }
 
-.navbar{
+.navbar {
     justify-content: space-between;
     align-items: center;
-    
+    flex-wrap: wrap;
 }
 
-.brand{
-font-weight: bold;
-font-size: 2.8100rem;
-color: #131313;
-
+.brand {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #131313;
 }
 
-.banner-content{
-    align-items: center;
-}
-.nav-item{
-    list-style:none;
-    margin-right: 30px;
-    
-}
-.nav-link{
+.nav-link {
     text-decoration: none;
     font-weight: 500;
-    
+    color: #424242;
 }
 
-.navbar, .banner{
-    max-width: 1500px;
-    margin: 0 auto;
+.nav-link:hover {
+    color: #FF900E;
 }
 
-.banner-content{
-    max-width: 850px;
+.nav-item {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+/* Banner */
+.banner {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 30px 20px;
     text-align: center;
-    margin-bottom: 50px;
-
 }
-.banner-title{
+
+.banner-content {
+    max-width: 850px;
+    margin: 0 auto 40px;
+}
+
+.banner-title {
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.banner-image{
-    width: 100% ;
+.banner-para {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #727272;
 }
 
-/*responsive media query*/
-@media screen and (max-width:576px){
-    .navbar, .nav-links{
-        flex-direction: column;
+.banner-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive design */
+@media screen and (max-width: 992px) {
+    .brand {
+        font-size: 2rem;
     }
+
+    .banner-title {
+        font-size: 2.5rem;
+    }
+
+    .nav-item {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-item {
+        margin-left: 0;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .banner-para {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn-primary {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .banner-title {
+        font-size: 1.8rem;
+    }
+
+    .banner-para {
+        font-size: 0.95rem;
+    }
+}
+
+/* main section */
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main>section{
+    margin-top: 130px;
+}
+
+.teams{
+    align-items:center;
+}
+.team-img-container{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+}
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;
+}
+.feature-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+#quick-list{
+    font-weight: 500;
 }
