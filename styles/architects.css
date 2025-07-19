@@ -235,6 +235,18 @@ main>section{
     filter:grayscale(100%);
 }
 
+/*footer styles */
+.footer-des{
+    width: 610px;
+    height: 23px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 39px 410px;
+    font-size: 1.25rem;
+    
+
+}
+
 
 /* Responsive design */
 @media screen and (max-width: 576px) {
